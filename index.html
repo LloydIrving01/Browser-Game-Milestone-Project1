@@ -12,8 +12,13 @@
         <h1>Hangman</h1>
         <div>Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
     </header>
-    <main class="img">
-        <img src="./assets/h-0.png" alt="starting-pic">
+    <main>
+        <p>Guess The Word</p>
+        <img class="hangman-pic" src="./assets/h-0.png" alt="starting-pic">
+        <p class="wordSpotlight">The word to be guessed goes here</p>
+        <div class="keyboard">
+            <button class="btn" onclick="reset()">Reset</button>
+        </div>
     </main>
 </body>
 </html>
