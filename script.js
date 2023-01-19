@@ -13,7 +13,6 @@ let wrdStatus = null;
 
 function randomWord() {
     ans = programming_languages[Math.floor(Math.random() * programming_languages.length)];
-    alert(ans);
 }
 
 // Generate Keyboard Buttons
@@ -28,11 +27,24 @@ function generateButtons() {
          >
             ` + letter + `
          </button>
-         `);
+         `).join(' ');
 
     document.querySelector('.keyboard').innerHTML = btnsHTML;
 }
 
 
+
+// Blank Spaces for the Letters
+
+function guessWord(){
+    wrdStatus = ans.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+
+     document.querySelector('.wordSpotlight').innerHTML = wrdStatus;
+}
+
+document.querySelector('#maxWrong').innerHTML = maxWrong;
+
+
 randomWord();
 generateButtons();
+guessWord();
