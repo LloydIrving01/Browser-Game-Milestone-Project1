@@ -31,7 +31,19 @@ function generateButtons() {
 
     document.querySelector('.keyboard').innerHTML = btnsHTML;
 }
+function handleGuess(chosenLetter){
+    guessed.indexOf(chosenLetter) ===-1 ? guessed.push(chosenLetter) : null;
+    document.getElementById(chosenLetter).setAttribute('disabled', true);
 
+    //alert(ans);
+
+    if (ans.indexOf(chosenLetter) >=0) {
+        guessWord();
+    } else if (ans.indexOf(chosenLetter) === -1) {
+        mistakes++;
+        updateMistakes();
+    }
+}
 
 
 // Blank Spaces for the Letters
@@ -40,6 +52,12 @@ function guessWord(){
     wrdStatus = ans.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
 
      document.querySelector('.wordSpotlight').innerHTML = wrdStatus;
+}
+
+// Update Mistakes When Wrong Letter is Guessed
+
+function updateMistakes() {
+    document.querySelector("#mistakes").innerHTML = mistakes;
 }
 
 document.querySelector('#maxWrong').innerHTML = maxWrong;
