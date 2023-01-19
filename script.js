@@ -16,5 +16,23 @@ function randomWord() {
     alert(ans);
 }
 
+// Generate Keyboard Buttons
+
+function generateButtons() {
+    let btnsHTML = "abcdefghijklmnopqrstuvwxyz".split('').map(letter =>
+        `
+         <button 
+            class ="btn btn-lg btn-primary m-2"
+            id= '` + letter + `'
+            onClick="handleGuess('` + letter + `')"
+         >
+            ` + letter + `
+         </button>
+         `);
+
+    document.querySelector('.keyboard').innerHTML = btnsHTML;
+}
+
 
 randomWord();
+generateButtons();
