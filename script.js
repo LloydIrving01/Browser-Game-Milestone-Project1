@@ -16,7 +16,6 @@ function randomWord() {
 }
 
 // Generate Keyboard Buttons
-
 function generateButtons() {
     let btnsHTML = "abcdefghijklmnopqrstuvwxyz".split('').map(letter =>
         `
@@ -31,6 +30,8 @@ function generateButtons() {
 
     document.querySelector('.keyboard').innerHTML = btnsHTML;
 }
+
+// Letter Guesses
 function handleGuess(chosenLetter){
     guessed.indexOf(chosenLetter) ===-1 ? guessed.push(chosenLetter) : null;
     document.getElementById(chosenLetter).setAttribute('disabled', true);
@@ -39,15 +40,16 @@ function handleGuess(chosenLetter){
 
     if (ans.indexOf(chosenLetter) >=0) {
         guessWord();
+        wordGuessed();
     } else if (ans.indexOf(chosenLetter) === -1) {
         mistakes++;
         updateMistakes();
+        gameLost();
     }
 }
 
 
 // Blank Spaces for the Letters
-
 function guessWord(){
     wrdStatus = ans.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
 
@@ -55,10 +57,26 @@ function guessWord(){
 }
 
 // Update Mistakes When Wrong Letter is Guessed
-
 function updateMistakes() {
     document.querySelector("#mistakes").innerHTML = mistakes;
 }
+
+// Word is Guessed
+function wordGuessed() {
+    if(wrdStatus === ans) {
+        document.querySelector('.keyboard').innerHTML = "Congratulations! You Won!";
+    }
+}
+
+// Lost the Game
+
+function gameLost() {
+    if(mistakes === maxWrong) {
+        document.querySelector('.keyboard').innerHTML = "You Lost!!";
+    }
+}
+
+
 
 document.querySelector('#maxWrong').innerHTML = maxWrong;
 
