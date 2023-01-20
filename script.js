@@ -45,6 +45,7 @@ function handleGuess(chosenLetter){
         mistakes++;
         updateMistakes();
         gameLost();
+        updateHangmanPic();
     }
 }
 
@@ -76,8 +77,12 @@ function gameLost() {
     }
 }
 
-// Reset
+// Update Hangman Pic
+function updateHangmanPic() {
+    document.querySelector('.hangman-pic').src="./assets/"+ mistakes + ".png";
+}
 
+// Reset
 function reset() {
     mistakes = 0;
     guessed = [];
