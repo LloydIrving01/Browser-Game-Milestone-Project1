@@ -76,7 +76,18 @@ function gameLost() {
     }
 }
 
+// Reset
 
+function reset() {
+    mistakes = 0;
+    guessed = [];
+    document.querySelector('.hangman-pic').src='./assets/h-0.png';
+
+    randomWord();
+    guessWord();
+    updateMistakes();
+    generateButtons();
+}
 
 document.querySelector('#maxWrong').innerHTML = maxWrong;
 
