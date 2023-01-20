@@ -1,0 +1,56 @@
+* { 
+    margin: 5px 0 5px 0;
+}
+body {
+    background: linear-gradient(25deg, rgb(45, 185, 255),#f69d3c);
+    background-attachment: fixed;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 70px;
+}
+
+.container div {
+    margin: 10px 10px 10px 10px;
+    text-align: right;
+    font-size: x-large;
+    font-weight: bolder;
+    color: red;
+}
+p {
+    text-align: center;
+    font-size: x-large;
+}
+
+img {
+    display: flex;
+    padding: 0;
+    margin: auto;
+    
+}
+
+.wordSpotlight {
+    margin-top: 15px;
+    font-size: 2em;
+}
+
+.keyboard {
+    margin-top: 25px;
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    font-size: 3em;
+    color: rgb(252, 0, 0);
+}
+
+.btn-lg {
+    font-size: xx-large;
+}
+
+section .btn {
+    display: flex;
+    margin: 25px auto;
+    background-color: gold;
+    font-size: x-large;
+}
