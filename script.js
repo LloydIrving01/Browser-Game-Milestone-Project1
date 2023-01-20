@@ -69,9 +69,9 @@ function wordGuessed() {
 }
 
 // Lost the Game
-
 function gameLost() {
     if(mistakes === maxWrong) {
+        document.querySelector('.wordSpotlight').innerHTML = "The word was: " + ans;
         document.querySelector('.keyboard').innerHTML = "You Lost!!";
     }
 }
@@ -88,6 +88,7 @@ function reset() {
     updateMistakes();
     generateButtons();
 }
+
 
 document.querySelector('#maxWrong').innerHTML = maxWrong;
 
