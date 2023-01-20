@@ -20,7 +20,7 @@ function generateButtons() {
     let btnsHTML = "abcdefghijklmnopqrstuvwxyz".split('').map(letter =>
         `
          <button 
-            class ="btn btn-lg btn-primary m-2"
+            class ="btn-lg"
             id= '` + letter + `'
             onClick="handleGuess('` + letter + `')"
          >
