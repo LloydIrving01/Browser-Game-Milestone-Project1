@@ -2,7 +2,7 @@
  
 This repo is the first of 3 milestone projects in my Software Development course.
 
-Having learned HTML, CSS, & Javascript, these are what will be used for my first browswer game.
+Having learned HTML, CSS, & Javascript, these are what will be used for my first browser game.
 
 For this project, I have decided to create a simple game of hangman.
 
