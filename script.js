@@ -1,5 +1,6 @@
 // Array of Programming Languages 
-const programming_languages = ["python","c","javascript","php","swift","java","go","sql","ruby","kotlin","html","css"]
+// const programming_languages = ["python","c","javascript","php","swift","java","go","sql","ruby","kotlin","html","css"]
+const nintendo_characters = ["mario", "luigi", "donkey kong", "yoshi", "bowser", "samus", "kirby", "ness", "link", "zelda"]
 
 // Global Variables
 
@@ -12,7 +13,8 @@ let wrdStatus = null;
 // Generate Random Word from Array
 
 function randomWord() {
-    ans = programming_languages[Math.floor(Math.random() * programming_languages.length)];
+    // ans = programming_languages[Math.floor(Math.random() * programming_languages.length)];
+    ans = nintendo_characters[Math.floor(Math.random() * nintendo_characters.length)];
 }
 
 // Generate Keyboard Buttons
@@ -93,7 +95,6 @@ function reset() {
     updateMistakes();
     generateButtons();
 }
-
 
 document.querySelector('#maxWrong').innerHTML = maxWrong;
 
