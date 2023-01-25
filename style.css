@@ -6,17 +6,16 @@ body {
     background-attachment: fixed;
 }
 
-.container h1 {
+h1 {
     text-align: center;
     font-size: 70px;
 }
 
-.container div {
+div {
     margin: 10px 10px 10px 10px;
     text-align: right;
     font-size: x-large;
     font-weight: bolder;
-    color: red;
 }
 p {
     text-align: center;
@@ -27,18 +26,17 @@ img {
     display: flex;
     padding: 0;
     margin: auto;
-    
 }
 
 .wordSpotlight {
     margin-top: 15px;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 .keyboard {
     margin-top: 25px;
     display: flex;
-    /* justify-content: center; */
+    
     justify-content: space-evenly;
     font-size: 3em;
     color: rgb(252, 0, 0);
@@ -48,7 +46,7 @@ img {
     font-size: xx-large;
 }
 
-section .btn {
+.btn {
     display: flex;
     margin: 25px auto;
     background-color: gold;
